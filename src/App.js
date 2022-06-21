@@ -51,6 +51,10 @@ import './App.css';
 const Slider = (props) => {
     const [slide, setSlide] = useState(0);
 
+    function changeSlide(i) {
+        setSlide(slide + i)
+    }
+
     return (
         <Container>
             <div className="slider w-50 m-auto">
@@ -61,12 +65,10 @@ const Slider = (props) => {
                 <div className="buttons mt-3">
                     <button 
                         className="btn btn-primary me-2"
-                        // onClick={() => this.changeSlide(-1)}
-                        >-1</button>
+                        onClick={() => changeSlide(-1)}>-1</button>
                     <button 
                         className="btn btn-primary me-2"
-                        // onClick={() => this.changeSlide(1)}
-                        >+1</button>
+                        onClick={() => changeSlide(1)}>+1</button>
                     <button 
                         className="btn btn-primary me-2"
                         // onClick={this.toggleAutoplay}
